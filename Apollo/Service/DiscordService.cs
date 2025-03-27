@@ -2,7 +2,6 @@ using Discord;
 using Discord.WebSocket;
 using Serilog;
 using Serilog.Events;
-using Apollo.Service;
 
 namespace Apollo.Service;
 
@@ -25,12 +24,8 @@ public static class DiscordService
         await Client.LoginAsync(TokenType.Bot, Token);
         await Client.StartAsync();
     }
-    
-    /// <summary>
-    /// Sends the exported file (or zip) to the Discord channel.
-    /// </summary>
-    /// <param name="filePath">Absolute path of the file to send.</param>
-    public static async Task SendExportFileAsync(string filePath)
+
+    public static async Task SendVideoAsync()
     {
         if (await Client.GetChannelAsync(ChannelId) is not IMessageChannel channel)
         {
@@ -38,14 +33,10 @@ public static class DiscordService
             return;
         }
         
-        if (!File.Exists(filePath))
-        {
-            Log.Error("File {filePath} does not exist.", filePath);
-            return;
-        }
-        
-        await channel.SendFileAsync(filePath, "Here is your exported file");
-        Log.Information("Sent exported file {filePath} to Discord", filePath);
+        var videoPath = Path.Combine(ApplicationService.ExportDirectory, "output.mp4");
+
+        if (!File.Exists(videoPath)) return;
+        await channel.SendFileAsync(videoPath, "@everyone");
     }
     
     private static async Task LogAsync(LogMessage message)
