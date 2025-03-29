@@ -24,6 +24,15 @@ git clone https://github.com/FabianFG/CUE4Parse.git --recursive
 
 - Clyde is a discord bot that exports paths through the game and sends result to Discord as a json/zip file (Texture exporting coming soon)
 
-- Apollo [Apollo-Creator-Credits](https://github.com/GhostScissors/Apollo) is a bot that generates video with voice lines 
+- Apollo is a bot that generates video with voice lines exported from the game files
 
 choose which one you want and replace your tokens in DiscordService.cs file then build and run
+
+## Credits 
+ ___
+
+[GhostScissors](https://github.com/GhostScissors) Creator of Apollo Bot
+
+[SalahLeaks](https://github.com/SalahLeaks] Creator of Clyde Bot
+
+[Asval](https://github.com/4sval) [FabianFG](https://github.com/FabianFG) Creator of CUE4Parse Library 
