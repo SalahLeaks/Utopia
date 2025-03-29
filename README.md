@@ -33,6 +33,6 @@ choose which one you want and replace your tokens in DiscordService.cs file then
 
 [GhostScissors](https://github.com/GhostScissors) Creator of Apollo Bot
 
-[SalahLeaks](https://github.com/SalahLeaks] Creator of Clyde Bot
+[SalahLeaks](https://github.com/SalahLeaks) Creator of Clyde Bot
 
 [Asval](https://github.com/4sval) [FabianFG](https://github.com/FabianFG) Creator of CUE4Parse Library 
