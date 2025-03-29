@@ -10,7 +10,7 @@ public static class ImageService
     {
         var backgroundImage = Path.Combine(ApplicationService.DataDirectory, "background.png");
         var fontPath = Path.Combine(ApplicationService.DataDirectory, "burbankbigcondensed_bold.otf");
-        const string credits = "via - @SalahLeaks";
+        const string credits = "via - @YOURTAG";
 
         var typeface = SKTypeface.FromFile(fontPath);
         if (typeface == null)
